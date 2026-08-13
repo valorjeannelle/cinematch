@@ -5,6 +5,9 @@ catalogue de film type TMDB
 `git clone https://github.com/valorjeannelle/cinematch.git
 cd projet
 npm install`
-
-### Lien live
+###Technologies utilisées
+- HTML
+- CSS
+- JavScript
+#### Lien live
 https://valorjeannelle.github.io/cinematch/
