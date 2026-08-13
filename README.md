@@ -6,5 +6,5 @@ catalogue de film type TMDB
 cd projet
 npm install`
 
-###cLien live
+### Lien live
 https://valorjeannelle.github.io/cinematch/
