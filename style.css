@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+    
+    --fond: #0B0B10;
+    --surface: #15151D;
+    --surface-claire: #1E1E28;
+
+
+
+    --blanc: #F8FAFC;
+    --gris: #A1A1AA;
+    --gris-fonce: #52525B;
+
+    
+    --vert: #22C55E;
+    --orange: #F59E0B;
+    --rouge: #EF4444;
+
+    
+    --bordure: #292934;
+
+    
+    --ombre: 0 10px 30px rgba(0, 0, 0, 0.35);
+    --rayon: 16px;
+    --transition: 0.3s ease;
+}
+
+*{
+    box-sizing: border-box;
+    
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color:var(--fond);
+    color: var(--blanc);
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: var(--surface);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 24px;
+    font-weight: bold;
+}
+a{
+    text-decoration: none;
+    color: var(--gris);
+    cursor: pointer;
+}
+#btn-orange{
+    color:var(--orange);
+}
+#btn-orange:hover{
+    color: var(--rouge);
+}
+a:hover{
+    color: var(--blanc);
+}
+h1{
+    font-size: 45px;
+}
+h2{
+    font-size: 50px;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#contenus-films{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    text-align: center;
+    
+}
+#contenu-input{
+    width: 500px;
+}
+input{
+    width: 50%;
+    padding: 20px 10px;
+    border: 1px solid var(--or-clair);
+    border-radius: 8px;
+    font-size: 14px;
+}
+header button{
+    border: 1px solid var(--bordure);
+    border-radius: 8px;
+    padding: 20px 0;
+    background-color: var(--rouge);
+    min-width: 150px;
+}
+#cartes-films ,#favoris{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    padding: 20px;
+}
+article img{
+    width: 100%;
+    height: 50;
+    
+}
+article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 250px;
+    min-height: 400px;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #15151C;
+    cursor: pointer;
+    box-shadow: 0 5px 25px var(--gris-fonce);
+    transition: transform 0.3s ease;
+    padding: 0;
+    margin: 0;
+}
+
+article:hover {
+    transform: translateY(-5px);
+}
+#modale{
+    display: none;
+}
+.red {
+    background-color: var(--rouge);
+
+}
+
+.orange {
+    background-color: var(--orange);
+}
+
+.green {
+    background-color: var(--vert);
+}
+.badge-note{
+    padding: 10px 10px;
+    border: none;
+    border-radius: 25px;
+}
+#modale{
+    display: none;
+    width: 50%;
+}
+#contenu-prefere{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+#fermer{
+    background:transparent;
+}
+#fermer:hover{
+    background-color: var(--rouge);
+}
+
+@media only screen and (max-width: 1024px) {
+    header {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+
+    h2 {
+        font-size: 38px;
+    }
+
+    #contenu-input {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    #cartes-films, #favoris {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    #modale {
+        display: none;
+        width: 80%;
+    }
+}
+
+@media only  screen and (max-width: 600px) {
+    header {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    #contenu-input {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    header button {
+        width: 100%;
+    }
+
+    #cartes-films, #favoris {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    article {
+        max-width: 100%;
+    }
+
+    #modale {
+        display: none;
+        width: 95%;
+    }
+}

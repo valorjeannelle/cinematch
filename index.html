@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CinéMatch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>CinéMatch</h1>
+        <nav>
+            <a href="#contenus-films">Films</a>
+            <a href="#contenu-prefere" id="btn-orange">Favoris</a>
+        </nav>
+        <div id="contenu-input">
+            <input type="text" id="recherche" placeholder="Recherhcer un film....">
+            <button id="valider">Chercher</button>
+        </div>
+
+    </header>
+    <main>
+        <div class="affichage">
+            <div id="chargement">Chargement...</div>
+        </div>
+        <section id="contenus-films">
+            <h2>Vos contenus préférés</h2>
+            <div id="cartes-films"></div>
+        </section>
+        <p id="erreur"></p>
+        <section id="modale">
+            <button id="fermer">
+                <img src="images/fermer.png" alt="icon-fermer">
+            </button>
+            <h2 id="titre-modale"></h2>
+            <p id="synopsis"></p>
+            <div id="genres"></div>
+        </section>
+        <section id="contenu-prefere">
+            <h2>Mes favoris </h2>
+            <div id="favoris"></div>
+        </section>
+    </main>
+</body>
+<script src="script.js"></script>
+</html>
