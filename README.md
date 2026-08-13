@@ -1,4 +1,4 @@
-" CinéMatch
+# CinéMatch
 catalogue de film type TMDB
 
 ## Installation
